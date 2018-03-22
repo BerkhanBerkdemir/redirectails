@@ -1,12 +1,24 @@
 class UrlController < ApplicationController
   def index; end
+
   def show
     @url = Url.find_by url_id: params[:url_id]
+
+    unless @url
+      flash[:danger] = "We didn't find this link. Make sure you have a valid short link."
+      render 'landings/index'
+    end
   end
 
   def redirect_user
     @url = Url.find_by url_id: params[:url_id]
-    redirect_to @url.url
+
+    if @url
+      redirect_to @url.url
+    else
+      flash[:danger] = "We didn't find this link. Make sure you have a valid short link."
+      render 'landings/index'
+    end
   end
 
   def generate
