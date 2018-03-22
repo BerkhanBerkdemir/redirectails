@@ -3,6 +3,10 @@
 
 <div style="height: 160px;"></div>
 
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <h1 class="text-center" style="padding-top: 40px;">RedirecTails</h1>
 
 <div class="row">

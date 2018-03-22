@@ -17,21 +17,14 @@ class UrlController < ApplicationController
     if @url.save
       redirect_to settings_path @url.url_id
     else
-      puts 'error'
+      flash[:error] = "Something went wrong. Could you check the link for us?"
+      render 'landings/index'
     end
   end
 
   def generate_id
+    alphabet = Array('A'..'Z') + Array('a'..'z')
+    numbers = Array(0..9)
     Array.new(6) { (alphabet + numbers).sample }.join
-  end
-
-  private
-  def alphabet
-    @alphabet ||= Array('A'..'Z') + Array('a'..'z')
-  end
-
-  private
-  def numbers
-    @numbers ||= Array(0..9)
   end
 end
