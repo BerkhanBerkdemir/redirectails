@@ -1,0 +1,21 @@
+<%# https://bootsnipp.com/snippets/featured/custom-search-input %>
+<%= provide(:title, 'Let\'s generate') %>
+
+<div style="height: 160px;"></div>
+
+<h1 class="text-center" style="padding-top: 40px;">RedirecTails</h1>
+
+<div class="row">
+  <div class="col-lg-6" style="margin: 0 auto;">
+    <%= form_for :url, url: generate_path, local: true do |form| %>
+      <div class="input-group col-md-12">
+        <div class="input-group mb-3">
+          <%= form.url_field :url, class: 'form-control', required: true, autofocus: true, placeholder: t('landing.enter_an_url'), 'aria-label': t('landing.enter_an_url'), 'aria-describedby': t('landing.enter_an_url') %>
+          <div class="input-group-append">
+            <%= form.submit t('landing.generate'), class: 'btn btn-outline-primary', 'aria-label': t('landing.generate'), 'aria-describedby': t('landing.generate')  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
