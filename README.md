@@ -4,6 +4,8 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 > I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
 
+![](screenshot.png)
+
 ## Installation
 
 ```shell
