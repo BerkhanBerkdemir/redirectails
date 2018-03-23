@@ -2,7 +2,9 @@
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
-> I'm using GitLab for issue tracker and CI.
+> I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
+
+![](screenshot.png)
 
 ## Installation
 
@@ -15,7 +17,7 @@ bin/rails db:setup
 
 ## Technologies
 
-* PostgreSQL as a database - For feature plan. Right now SQLite
+* SQLite as a database
 * Bootstrap as a frontend
 
 ## Documentation
@@ -33,6 +35,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ## Feature Plan
 
 * Admin dashboard for manage URLs and see URL analytics
+* User will select database system. PostgreSQL or SQLite
 
 ## Maintainers
 

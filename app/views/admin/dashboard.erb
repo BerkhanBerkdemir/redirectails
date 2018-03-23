@@ -1,0 +1,28 @@
+<%= provide(:title, 'Dashboard') %>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Original URL</th>
+      <th>Generated URL</th>
+      <th>Status</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @url.each do |url| %>
+    <tr>
+      <td><%= url.id %></td>
+      <td><%= url.url %></td>
+      <td><%= url.url_id %></td>
+      <td><%= url.status %></td>
+      <td><%= url.created_at %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
