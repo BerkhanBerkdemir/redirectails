@@ -6,6 +6,16 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 ![](screenshot.png)
 
+## Latest
+
+**Version**: 1.1.0
+
+* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.1.0/archive.zip)
+
+* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.1.0/archive.tar.bz2)
+
+or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirectails/tags)
+
 ## Installation
 
 ```shell
