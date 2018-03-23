@@ -15,11 +15,20 @@ before_script:
   - gem install rake                          # Error thrower...
   - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
 
+stages:
+  - test
+
 rspec:
+  stage: test
+  variables:
+    RAILS_ENV: test
   script:
   - rspec spec
 
 rails:
+  stage: test
+  variables:
+    RAILS_ENV: test
   script:
   - rails db:migrate
   - rails db:seed
