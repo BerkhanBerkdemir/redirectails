@@ -2,8 +2,8 @@
 
 <br>
 
-<p><strong>Original URL:</strong> <%= @url.url %> </p>
+<p><strong><%= t('show.original_url') %>:</strong> <%= @url.url %> </p>
 
-<p><strong>Shortened link:</strong> <%= link_to @url.url_id, redirect_path %> </p>
+<p><strong><%= t('show.shortened_link') %>:</strong> <%= link_to @url.url_id, redirect_path %> </p>
 
-<p><strong>Status:</strong> <% if @url.status %>Private<% else %>Public<% end %> </p>
+<p><strong><%= t('show.status') %>:</strong> <% if @url.status %><%= t('show.private') %><% else %><%= t('show.public') %><% end %> </p>

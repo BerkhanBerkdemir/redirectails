@@ -34,5 +34,14 @@ en:
 
   # Landing page, a.k.a root page
   landing:
-    enter_an_url : "Enter an URL"
+    title: "Let's generate"
+    enter_an_url: "Enter an URL"
     generate: "Generate"
+
+  # URL page
+  show:
+    original_url: "Original URL"
+    shortened_link: "Shortened link"
+    status: "Status"
+    private: "Private"
+    public: "Public"
