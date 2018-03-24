@@ -4,9 +4,9 @@
 image: "ruby:2.3"
 
 # Cache gems in between builds
-cache:
-  paths:
-    - vendor/ruby
+# cache:
+#   paths:
+#     - vendor/ruby
 
 before_script:
   - ruby -v                                   # Print out ruby version for debugging
