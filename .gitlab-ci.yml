@@ -4,13 +4,13 @@
 image: "ruby:2.3"
 
 # Cache gems in between builds
-# cache:
-#   paths:
-#     - vendor/ruby
+cache:
+  paths:
+    - vendor/ruby
 
 before_script:
   - ruby -v                                   # Print out ruby version for debugging
-  - apt-get update -q && apt-get install nodejs -yqq
+  - apt-get update -q && apt-get install nodejs ruby-dev -yqq
   - gem install bundler --no-ri --no-rdoc     # Bundler is not installed with the image
   - gem install rake                          # Error thrower...
   - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
