@@ -12,6 +12,7 @@
       <th>Generated URL</th>
       <th>Status</th>
       <th>Created</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,7 @@
       <td><%= url.url_id %></td>
       <td><%= url.status %></td>
       <td><%= url.created_at %></td>
+      <td><%= link_to 'Delete', delete_path(url), method: :delete %></td>
     </tr>
   <% end %>
   </tbody>

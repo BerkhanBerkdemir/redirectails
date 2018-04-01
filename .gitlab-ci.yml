@@ -3,6 +3,16 @@
 # https://hub.docker.com/r/library/ruby/tags/
 image: "ruby:2.3"
 
+services:
+- postgres:alpine
+
+variables:
+  POSTGRES_USER: "redirectails"
+  POSTGRESS_PASSWORD: "secretpassw0rd"
+  POSTGRESS_DATABASE: "redirectails_development"
+  RAILS_ENV: "test"
+  DATABASE_URL: "postgres://redirectails:secretpassw0rd@postgres:5432/"
+
 # Cache gems in between builds
 cache:
   paths:
@@ -10,16 +20,21 @@ cache:
 
 before_script:
   - ruby -v                                   # Print out ruby version for debugging
-  - apt-get update -q && apt-get install nodejs -yqq
-  - gem install bundler  --no-ri --no-rdoc    # Bundler is not installed with the image
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - apt-get update -q && apt-get install nodejs ruby-dev -yqq
+  - gem install bundler --no-ri --no-rdoc     # Bundler is not installed with the image
+  - bundle install -j $(nproc)                # Install dependencies into usr/local/lib
+  - bundle update                             # Update dependencies for see new version
+
+stages:
+  - test
 
 rspec:
+  stage: test
   script:
   - rspec spec
 
 rails:
+  stage: test
   script:
-  - rails db:migrate
-  - rails db:seed
+  - rails db:setup
   - rails test
