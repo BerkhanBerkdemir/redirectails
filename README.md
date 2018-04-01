@@ -3,6 +3,7 @@
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
 > I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
+> Maybe I can change main repository hosting with GitHub but now GitHub just a mirror.
 
 ![](screenshot.png)
 
@@ -18,17 +19,23 @@ or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirecta
 
 ## Installation
 
+Please follow the [documentation](doc/installation.md)
+
+> Don't forget. You need to initiliaze a PostgreSQL database. You can find how in the installation documentation.
+
 ```shell
 gem install bundle
 RAILS_ENV=development
+DATABASE_URL=postgres://redirectails:secretpassw0rd@localhost/
 bundle
 bin/rails db:setup
 ```
 
 ## Technologies
 
-* SQLite as a database
+* PostgreSQL as a database
 * Bootstrap as a frontend
+* Heroku as a PaaS
 
 ## Documentation
 
@@ -45,7 +52,6 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ## Feature Plan
 
 * Admin dashboard for manage URLs and see URL analytics
-* User will select database system. PostgreSQL or SQLite
 
 ## Maintainers
 
