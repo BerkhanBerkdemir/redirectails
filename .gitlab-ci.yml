@@ -22,23 +22,18 @@ before_script:
   - ruby -v                                   # Print out ruby version for debugging
   - apt-get update -q && apt-get install nodejs ruby-dev -yqq
   - gem install bundler --no-ri --no-rdoc     # Bundler is not installed with the image
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - bundle update -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
 
 stages:
   - test
 
 rspec:
   stage: test
-  variables:
-    RAILS_ENV: test
   script:
   - rspec spec
 
 rails:
   stage: test
-  variables:
-    RAILS_ENV: test
   script:
-  - rails db:migrate
-  - rails db:seed
+  - rails db:setup
   - rails test
