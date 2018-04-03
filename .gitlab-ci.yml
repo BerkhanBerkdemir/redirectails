@@ -1,4 +1,12 @@
 
+.rails-test: &rails-test
+  stage: test
+  script:
+  - rspec spec
+  artifacts:
+    paths:
+    - coverage/
+
 services:
 - postgres:alpine
 
@@ -22,18 +30,12 @@ stages:
 
 rspec:2.3:
   image: "ruby:2.3"
-  stage: test
-  script:
-  - rspec spec
+  <<: *rails-test
 
 rspec:2.4:
   image: "ruby:2.4"
-  stage: test
-  script:
-  - rspec spec
+  <<: *rails-test
 
 rspec:2.5:
   image: "ruby:2.5"
-  stage: test
-  script:
-  - rspec spec
+  <<: *rails-test
