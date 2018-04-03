@@ -19,6 +19,8 @@ docker run \
   --detach \
   --publish 5432:5432 postgres:alpine
 export DATABASE_URL="postgres://redirectails:secretpassw0rd@localhost/"
+export RAILS_ENV="development"
+bin/rails db:setup
 ```
 
 > Don't assign database name because you will use this database for development and test environment.
