@@ -9,6 +9,9 @@
 /vendor/*
 !/vendor/.keep
 
+# Ignore coverage outputs
+/coverage
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
