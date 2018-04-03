@@ -1,6 +1,8 @@
 class Url < ApplicationRecord
-  validates :url, presence: true
+  # TODO: IT IS NOT QUIET GOOD!
+  validates :url, presence: true,
+                  format: { with: /\A(http|https):\/\/(\S+)\z/ }
   validates :url_id, presence: true,
                      uniqueness: { case_sensitive: true }
-  validates :status, presence: true, inclusion: [true, false]
+  validates :status, inclusion: [true, false]
 end

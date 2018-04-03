@@ -6,22 +6,38 @@ RSpec.describe Url, type: :model do
   end
 
   it 'is valid with valid attributes' do
-    url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: 'public'
+    url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: false
     expect(url).to be_valid
   end
 
   it 'is not valid without url' do
-    url = Url.new url: nil
+    url = Url.new url: nil, url_id: 'J8kdSd', status: false
     expect(url).to_not be_valid
   end
 
   it 'is not valid without url_id' do
-    url = Url.new url_id: nil
+    url = Url.new url: 'https://example.com', url_id: nil, status: false
     expect(url).to_not be_valid
   end
 
   it 'is not valid without status' do
-    url = Url.new status: nil
+    url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: nil
     expect(url).to_not be_valid
+  end
+
+  # # TODO: It is not working. Check model again.
+  # it 'is not valid if status type is equal string not boolean' do
+  #   url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: 'public'
+  #   expect(url).to_not be_valid
+  # end
+
+  it 'is valid, if status is equal false (meaning public)' do
+    url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: false
+    expect(url).to be_valid
+  end
+
+  it 'is valid, if status is equal true (meaning private)' do
+    url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: true
+    expect(url).to be_valid
   end
 end
