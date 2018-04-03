@@ -52,6 +52,10 @@ See [documentation](doc/index.md)
 
 Please refer to [contributing documentation](CONTRIBUTING.md).
 
+### Coverage
+
+[Simplecov coverage](https://berkhanberkdemir.gitlab.io/redirectails/coverage)
+
 ### Code of Conduct
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
