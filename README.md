@@ -1,5 +1,10 @@
 # RedirecTails - *yet-another* URL shortener.
 
+| Master | Dev |
+| ------ | --- |
+| [![pipeline status](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/master/pipeline.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/master) | [![pipeline status](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/dev/pipeline.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/dev) |
+| [![coverage report](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/master/coverage.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/master) | [![coverage report](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/dev/coverage.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/dev) |
+
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
 > I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
@@ -9,11 +14,11 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 ## Latest
 
-**Version**: 1.1.0
+**Version**: 1.2.0
 
-* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.1.0/archive.zip)
+* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.0/archive.zip)
 
-* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.1.0/archive.tar.bz2)
+* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.0/archive.tar.bz2)
 
 or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirectails/tags)
 
@@ -27,6 +32,8 @@ Please follow the [documentation](doc/installation.md)
 gem install bundle
 RAILS_ENV=development
 DATABASE_URL=postgres://redirectails:secretpassw0rd@localhost/
+USER=Admin
+PASSWORD=secretpassw0rd
 bundle
 bin/rails db:setup
 ```
