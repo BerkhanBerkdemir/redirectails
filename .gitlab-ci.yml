@@ -46,7 +46,7 @@ pages:
   script:
   - rspec
   - mv coverage/ public/
-  coverage: '\(\d+.\d+\%\) covered'
+  coverage: '/\(\d+.\d+\%\) covered/'
   artifacts:
     expire_in: 30 days
     paths:
