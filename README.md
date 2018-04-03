@@ -14,11 +14,11 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 ## Latest
 
-**Version**: 1.2.0
+**Version**: 1.2.1
 
-* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.0/archive.zip)
+* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.1/archive.zip)
 
-* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.0/archive.tar.bz2)
+* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.1/archive.tar.bz2)
 
 or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirectails/tags)
 
