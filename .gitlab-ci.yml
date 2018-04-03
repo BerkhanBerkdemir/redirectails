@@ -42,6 +42,12 @@ rspec:2.5:
   image: "ruby:2.5"
   <<: *rails-test
 
+rubocop:
+  image: "ruby:2.3"
+  stage: test
+  script:
+  - rubocop
+
 pages:
   image: "ruby:2.3"
   stage: test
