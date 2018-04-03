@@ -37,6 +37,7 @@ group :development, :test do
   # Our default testing is Rspec
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'rubocop', '~> 0.54.0', require: false
 end
 
 group :development do
