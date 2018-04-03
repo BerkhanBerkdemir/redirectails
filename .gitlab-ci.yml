@@ -6,6 +6,8 @@
   artifacts:
     paths:
     - coverage/
+  except:
+  - master
 
 services:
 - postgres:alpine
