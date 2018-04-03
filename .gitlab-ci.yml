@@ -39,3 +39,15 @@ rspec:2.4:
 rspec:2.5:
   image: "ruby:2.5"
   <<: *rails-test
+
+pages:
+  image: "ruby:2.3"
+  stage: test
+  script:
+  - rspec
+  - mv coverage/ public/
+  coverage: '/Code coverage: \d+\.\d+/'
+  artifacts:
+    expire_in: 30 days
+    paths:
+    - public
