@@ -1,7 +1,13 @@
-# This file is a template, and might need editing before it works on your project.
-# Official language image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/ruby/tags/
-image: "ruby:2.3"
+
+.rails-test: &rails-test
+  stage: test
+  script:
+  - rspec spec
+  artifacts:
+    paths:
+    - coverage/
+  except:
+  - master
 
 services:
 - postgres:alpine
@@ -13,28 +19,37 @@ variables:
   RAILS_ENV: "test"
   DATABASE_URL: "postgres://redirectails:secretpassw0rd@postgres:5432/"
 
-# Cache gems in between builds
-cache:
-  paths:
-    - vendor/ruby
-
 before_script:
-  - ruby -v                                   # Print out ruby version for debugging
-  - apt-get update -q && apt-get install nodejs ruby-dev -yqq
-  - gem install bundler --no-ri --no-rdoc     # Bundler is not installed with the image
-  - bundle install -j $(nproc)                # Install dependencies into usr/local/lib
-  - bundle update                             # Update dependencies for see new version
+- ruby -v                                   # Print out ruby version for debugging
+- apt-get update -q && apt-get install nodejs ruby-dev -yqq
+- gem install bundler --no-ri --no-rdoc     # Bundler is not installed with the image
+- bundle install -j $(nproc)                # Install dependencies into usr/local/lib
+- bundle update                             # Update dependencies for see new version
+- rails db:setup                            # Run db:create db:migrate db:seed
 
 stages:
-  - test
+- test
 
-rspec:
+rspec:2.3:
+  image: "ruby:2.3"
+  <<: *rails-test
+
+rspec:2.4:
+  image: "ruby:2.4"
+  <<: *rails-test
+
+rspec:2.5:
+  image: "ruby:2.5"
+  <<: *rails-test
+
+pages:
+  image: "ruby:2.3"
   stage: test
   script:
-  - rspec spec
-
-rails:
-  stage: test
-  script:
-  - rails db:setup
-  - rails test
+  - rspec
+  - mv coverage/ public/
+  coverage: '/\(\d+.\d+\%\) covered/'
+  artifacts:
+    expire_in: 30 days
+    paths:
+    - public

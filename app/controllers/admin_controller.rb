@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  http_basic_authenticate_with name: 'admin', password: 'lorem'
+  http_basic_authenticate_with name: ENV.fetch('NAME'), password: ENV.fetch('PASSWORD')
 
   # Get all URL from database
   def dashboard
