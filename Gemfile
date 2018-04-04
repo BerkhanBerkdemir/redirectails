@@ -36,6 +36,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Our default testing is Rspec
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  
   gem 'simplecov'
   gem 'rubocop', '~> 0.54.0', require: false
 end
