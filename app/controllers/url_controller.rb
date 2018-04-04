@@ -22,17 +22,18 @@ class UrlController < ApplicationController
   end
 
   def generate
-    @url = Url.new(params.require(:url).permit(:url))
+    @url = Url.new(params.require(:url).permit(:url, :status))
     @url.url_id = generate_id
-    @url.status = false
 
     if @url.save
       redirect_to settings_path @url.url_id
     else
-      flash[:error] = "Something went wrong. Could you check the link for us?"
+      flash[:danger] = "Something went wrong. Could you check the link for us?"
       render 'landings/index'
     end
   end
+
+  private
 
   def generate_id
     alphabet = Array('A'..'Z') + Array('a'..'z')
