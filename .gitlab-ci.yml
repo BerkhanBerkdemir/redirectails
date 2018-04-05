@@ -49,6 +49,7 @@ rubocop:
   stage: test
   script:
   - rubocop
+  allow_failure: true
 
 pages:
   image: "ruby:2.3"
