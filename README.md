@@ -8,9 +8,9 @@
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
 > I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
-> Maybe I can change main repository hosting with GitHub but now GitHub just a mirror.
+> Maybe I can change main repository hosting with GitHub, but now GitHub just a mirror.
 
-![](screenshot.png)
+![RedirecTails screenshort from v1.1.0](screenshot.png)
 
 ## Latest
 
@@ -24,19 +24,7 @@ or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirecta
 
 ## Installation
 
-Please follow the [documentation](doc/installation.md)
-
-> Don't forget. You need to initiliaze a PostgreSQL database. You can find how in the installation documentation.
-
-```shell
-gem install bundle
-RAILS_ENV=development
-DATABASE_URL=postgres://redirectails:secretpassw0rd@localhost/
-USER=Admin
-PASSWORD=secretpassw0rd
-bundle
-bin/rails db:setup
-```
+Please follow the [documentation](wiki/Installation.md)
 
 ## Technologies
 
@@ -46,7 +34,7 @@ bin/rails db:setup
 
 ## Documentation
 
-See [documentation](doc/index.md)
+See [documentation](wiki/Home.md)
 
 ## Contributing
 
@@ -58,10 +46,10 @@ Please refer to [contributing documentation](CONTRIBUTING.md).
 
 ### Important links
 
-[Demo from master branch](https://production-redirectails.herokuapp.com/)
-[Ruby code coverage](https://berkhanberkdemir.gitlab.io/redirectails/coverage)
-[Main repository](https://gitlab.com/BerkhanBerkdemir/redirectails)
-[Mirror repository](https://github.com/BerkhanBerkdemir/redirectails)
+* [Demo from master branch](https://production-redirectails.herokuapp.com/)
+* [Ruby code coverages](https://berkhanberkdemir.gitlab.io/redirectails/coverage)
+* [Main repository](https://gitlab.com/BerkhanBerkdemir/redirectails)
+* [Mirror repository](https://github.com/BerkhanBerkdemir/redirectails)
 
 ### Code of Conduct
 
