@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use PostgreSQL as the database for Active Record
@@ -37,7 +36,7 @@ group :development, :test do
   # Our default testing is Rspec
   gem 'rspec-rails'
   gem 'rails-controller-testing'
-  
+
   gem 'simplecov'
   gem 'rubocop', '~> 0.54.0', require: false
 end
