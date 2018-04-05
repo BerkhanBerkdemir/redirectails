@@ -37,6 +37,7 @@ en:
     title: "Let's generate"
     enter_an_url: "Enter an URL"
     generate: "Generate"
+    is_private: "Is private?"
 
   # URL page
   show:

@@ -18,6 +18,8 @@ variables:
   POSTGRESS_DATABASE: "redirectails_development"
   RAILS_ENV: "test"
   DATABASE_URL: "postgres://redirectails:secretpassw0rd@postgres:5432/"
+  NAME: 'Admin'
+  PASSWORD: 'secretpassw0rd'
 
 before_script:
 - ruby -v                                   # Print out ruby version for debugging
@@ -41,6 +43,13 @@ rspec:2.4:
 rspec:2.5:
   image: "ruby:2.5"
   <<: *rails-test
+
+rubocop:
+  image: "ruby:2.3"
+  stage: test
+  script:
+  - rubocop
+  allow_failure: true
 
 pages:
   image: "ruby:2.3"
