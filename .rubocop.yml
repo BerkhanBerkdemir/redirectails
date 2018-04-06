@@ -2,6 +2,9 @@
 Rails:
   Enabled: true
 
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
 AllCops:
   Exclude:
     - bin/*
