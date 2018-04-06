@@ -30,20 +30,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Merhaba Dünya"
 
   # Landing page, a.k.a root page
   landing:
-    title: "Let's generate"
-    enter_an_url: "Enter an URL"
-    generate: "Generate"
-    is_private: "Is private?"
+    title: "Hadi oluşturalım"
+    enter_an_url: "Bir URL girelim"
+    generate: "Oluştur"
+    is_private: "Bu özel mi?"
 
   # URL page
   show:
-    original_url: "Original URL"
-    shortened_link: "Shortened link"
-    status: "Status"
-    private: "Private"
-    public: "Public"
-    clicked: "Clicked"
+    original_url: "Asıl URL"
+    shortened_link: "Kısaltılmış link"
+    status: "Durum"
+    private: "Özel"
+    public: "Açık"
+    clicked: "Tıklandı"

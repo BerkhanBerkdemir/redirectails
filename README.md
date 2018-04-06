@@ -34,7 +34,7 @@ Please follow the [documentation](wiki/Installation.md)
 
 ## Documentation
 
-See [documentation](wiki/Home.md)
+See [wiki](https://github.com/BerkhanBerkdemir/redirectails/wiki)
 
 ## Contributing
 

@@ -14,6 +14,7 @@ class UrlController < ApplicationController
     @url = Url.find_by url_id: params[:url_id]
 
     if @url
+      @url.update click: @url.click + 1
       redirect_to @url.url
     else
       flash[:danger] = "We didn't find this link. Make sure you have a valid short link."
