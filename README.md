@@ -1,30 +1,18 @@
 # RedirecTails - *yet-another* URL shortener.
 
-| Master | Dev |
-| ------ | --- |
-| [![pipeline status](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/master/pipeline.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/master) | [![pipeline status](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/dev/pipeline.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/dev) |
-| [![coverage report](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/master/coverage.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/master) | [![coverage report](https://gitlab.com/BerkhanBerkdemir/redirectails/badges/dev/coverage.svg)](https://gitlab.com/BerkhanBerkdemir/redirectails/commits/dev) |
+[![Build Status](https://travis-ci.org/BerkhanBerkdemir/redirectails.svg?branch=master)](https://travis-ci.org/BerkhanBerkdemir/redirectails) [![CodeFactor](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails/badge)](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails)
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
-
-> I'm using [GitLab](https://gitlab.com/BerkhanBerkdemir/redirectails) for issue tracker and CI.
-> Maybe I can change main repository hosting with GitHub, but now GitHub just a mirror.
 
 ![RedirecTails screenshort from v1.1.0](screenshot.png)
 
 ## Latest
 
-**Version**: 1.2.1
-
-* [Download as a zip](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.1/archive.zip)
-
-* [Download as a tar.bz2](https://gitlab.com/BerkhanBerkdemir/redirectails/repository/1.2.1/archive.tar.bz2)
-
-or other versions click the [link](https://gitlab.com/BerkhanBerkdemir/redirectails/tags)
+**Latest Version**: 1.2.2
 
 ## Installation
 
-Please follow the [documentation](wiki/Installation.md)
+Please follow the [documentation](documentation)
 
 ## Technologies
 
@@ -47,9 +35,7 @@ Please refer to [contributing documentation](CONTRIBUTING.md).
 ### Important links
 
 * [Demo from master branch](https://production-redirectails.herokuapp.com/)
-* [Ruby code coverages](https://berkhanberkdemir.gitlab.io/redirectails/coverage)
-* [Main repository](https://gitlab.com/BerkhanBerkdemir/redirectails)
-* [Mirror repository](https://github.com/BerkhanBerkdemir/redirectails)
+* [Main repository](https://github.com/BerkhanBerkdemir/redirectails)
 
 ### Code of Conduct
 
