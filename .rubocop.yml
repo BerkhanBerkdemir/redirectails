@@ -10,5 +10,8 @@ AllCops:
     - bin/*
     - config/*
     - config/*/*
-    - db/*
+    - db/schema.rb
     - db/*/*
+
+Documentation:
+  Enabled: false
