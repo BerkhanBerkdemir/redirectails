@@ -47,3 +47,7 @@ en:
     private: "Private"
     public: "Public"
     clicked: "Clicked"
+
+  error:
+    short_link_not_found: "We didn't find this link. Make sure you have a valid short link."
+    something_went_wrong: "Something went wrong. Could you check the link for us?"
