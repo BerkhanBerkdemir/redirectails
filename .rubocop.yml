@@ -3,9 +3,8 @@ Rails:
   Enabled: true
 
 AllCops:
-  Include:
-  - 'app/**/**'
   Exclude:
-  - 'db/**/**'
-  - 'config/**/**'
-  - 'spec/**/**'
+    - 'bin/*'
+    - 'config/**/**'
+    - 'db/migrate/**'
+    - 'db/schema.rb'
