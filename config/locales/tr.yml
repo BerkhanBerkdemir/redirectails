@@ -47,3 +47,7 @@ en:
     private: "Özel"
     public: "Açık"
     clicked: "Tıklandı"
+
+  error:
+    short_link_not_found: "Linki bulamadık. Doğru kısaltılmış linki kullandığınızdan emin olun."
+    something_went_wrong: "Birşeyler ters gitti. Bizim için tekrar kontrol eder misiniz linki?"

@@ -14,7 +14,7 @@ RSpec.describe Url, type: :model do
     url = Url.new url: nil, url_id: 'J8kdSd', status: false
     expect(url).to_not be_valid
   end
-  
+
   it 'is not valid if it is not start with http or https' do
     url = Url.new url: 'ftp://example.com', url_id: 'J8kdSd', status: false
     expect(url).to_not be_valid
@@ -25,7 +25,7 @@ RSpec.describe Url, type: :model do
     url = Url.new url: 'https:/example.com', url_id: 'J8kdSd', status: false
     expect(url).to_not be_valid
   end
-  
+
   it 'is not valid if user add another type of data' do
     url = Url.new url: 'lorem', url_id: 'J8kdSd', status: false
     expect(url).to_not be_valid
@@ -49,11 +49,7 @@ RSpec.describe Url, type: :model do
     expect(url).to_not be_valid
   end
 
-  # # TODO: It is not working. Check model again.
-  # it 'is not valid if status type is equal string not boolean' do
-  #   url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: 'public'
-  #   expect(url).to_not be_valid
-  # end
+  # TODO: It is not working. Check model again.
 
   it 'is valid, if status is equal false (meaning public)' do
     url = Url.new url: 'https://example.com', url_id: 'J8kdSd', status: false
