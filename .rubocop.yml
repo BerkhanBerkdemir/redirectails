@@ -12,6 +12,11 @@ AllCops:
     - config/*/*
     - db/schema.rb
     - db/*/*
+    - db/schema.rb
+    - config/environments/production.rb
+    - config/application.rb
+    - config/puma.rb
+    - spec/spec_helper.rb
 
 Documentation:
   Enabled: false
