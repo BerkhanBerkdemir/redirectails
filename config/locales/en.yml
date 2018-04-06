@@ -46,3 +46,4 @@ en:
     status: "Status"
     private: "Private"
     public: "Public"
+    clicked: "Clicked"
