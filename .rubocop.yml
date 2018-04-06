@@ -4,7 +4,8 @@ Rails:
 
 AllCops:
   Exclude:
-    - 'bin/*'
-    - 'config/**/**'
-    - 'db/migrate/**'
-    - 'db/schema.rb'
+    - bin/*
+    - config/*
+    - config/*/*
+    - db/*
+    - db/*/*
