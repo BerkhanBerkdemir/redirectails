@@ -5,10 +5,9 @@ Before you set your development environment make sure you have at least Ruby 2.3
 ## Create development environment
 
 ```shell
-export RAILS_ENV=development
-export NAME=Admin
-export PASSWORD=secretpassw0rd
-export DATABASE_URL="postgres://redirectails:secretpassw0rd@localhost/" # Make sure you don't assign database name with URL
+export RAILS_ENV=development \
+  NAME=Admin PASSWORD=secretpassw0rd \
+  DATABASE_URL="postgres://redirectails:secretpassw0rd@localhost/" # Make sure you don't assign database name with URL
 bundle # If it doesn't work, run with sudo
 bin/rails db:setup
 ```
