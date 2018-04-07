@@ -2,9 +2,21 @@
 Rails:
   Enabled: true
 
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
 AllCops:
   Exclude:
-    - 'bin/*'
-    - 'config/**/**'
-    - 'db/migrate/**'
-    - 'db/schema.rb'
+    - bin/*
+    - config/*
+    - config/*/*
+    - db/schema.rb
+    - db/*/*
+    - db/schema.rb
+    - config/environments/production.rb
+    - config/application.rb
+    - config/puma.rb
+    - spec/spec_helper.rb
+
+Documentation:
+  Enabled: false
