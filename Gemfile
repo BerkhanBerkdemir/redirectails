@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Bootstrap as a framework
+gem 'bootstrap', '~> 4.0'
+
 group :production do
   # Use Puma as the app server
   gem 'puma', '~> 3.7'
