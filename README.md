@@ -10,9 +10,9 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 **Latest Version**: 1.2.2
 
-### Deploy dev version
+### Deploy master version
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BerkhanBerkdemir/redirectails/tree/dev)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BerkhanBerkdemir/redirectails/tree/master)
 
 ## Installation
 
