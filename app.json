@@ -8,7 +8,7 @@
     ],
     "website": "https://github.com/BerkhanBerkdemir/redirectails",
     "repository": "https://github.com/BerkhanBerkdemir/redirectails",
-    "logo": "",
+    "logo": false,
     "success_url": "/",
     "scripts": {
         "postdeploy": "rails db:setup"
