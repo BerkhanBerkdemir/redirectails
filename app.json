@@ -1,6 +1,6 @@
 {
     "name": "Redirectails",
-    "description": "Redirectails official Heroku app",
+    "description": "Redirectails official Heroku button",
     "keywords": [
         "ruby",
         "rails",
@@ -8,32 +8,27 @@
     ],
     "website": "https://github.com/BerkhanBerkdemir/redirectails",
     "repository": "https://github.com/BerkhanBerkdemir/redirectails",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+    "image": "heroku/ruby",
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
     "success_url": "/",
     "scripts": {
-        "postdeploy": "rails db:setup"
+        "postdeploy": "bundle exec rails db:migrate"
     },
+    "addons": ["heroku-postgresql"],
     "env": {
-        "RAILS_ENV": {
-            "value": "production",
-            "description": "Your application will deploy for production stage."
-        },
         "NAME": {
             "value": "Admin",
-            "description": "Admin dashboard name."
+            "description": "Change dashboard username"
         },
         "PASSWORD": {
             "value": "secretpassw0rd",
-            "description": "Admin dashboard password."
-        },
-        "SECRET_KEY_BASE": {
-            "value": "e30225797dd0af13165c24de56ba8896fb969d621acaa2320ff69d3dbbfe2041ae0c8eae8696f5f6e61c8c3366a9ec18b33fa0c4bd91b770806c7a81ba88b3bd",
-            "description": "Random 128 charachters."
-        },
-        "RAILS_LOG_TO_STDOUT": "enabled",
-        "RAILS_SERVE_STATIC_FILES": "enabled"
-    },
-    "addons": [
-        "heroku-postgresql"
-    ],
-    "image": "heroku/ruby"
+            "description": "Change dashboard password"
+        }
+    }
 }
