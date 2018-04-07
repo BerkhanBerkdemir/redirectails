@@ -1,16 +1,12 @@
 # RedirecTails - *yet-another* URL shortener.
 
-[![Build Status](https://travis-ci.org/BerkhanBerkdemir/redirectails.svg?branch=master)](https://travis-ci.org/BerkhanBerkdemir/redirectails) [![CodeFactor](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails/badge)](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails)
+[![Build Status](https://travis-ci.org/BerkhanBerkdemir/redirectails.svg?branch=master)](https://travis-ci.org/BerkhanBerkdemir/redirectails) [![CodeFactor](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails/badge)](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails) ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg) ![Release](https://img.shields.io/badge/release-v1.3.0-blue.svg) ![Ruby Version](https://img.shields.io/badge/Ruby%20tested-2.3-green.svg)
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
 ![RedirecTails screenshort from v1.1.0](screenshot.png)
 
-## Latest
-
-**Latest Version**: 1.2.2
-
-### Deploy master version
+## Deploy master version
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BerkhanBerkdemir/redirectails/tree/master)
 
