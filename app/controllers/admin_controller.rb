@@ -3,7 +3,7 @@ class AdminController < ApplicationController
                                password: ENV.fetch('PASSWORD')
 
   # Get all URL from database
-  def dashboard
+  def index
     @url = Url.all
   end
 
@@ -14,6 +14,7 @@ class AdminController < ApplicationController
     # If it is successful return a success message with flash
     # If not return error message. Sysadmin should check error.
     # TODO: Write I18n for 19 and 22.
+    # TODO: Remove one redirect_to and put another one into under the if condition
     if url.destroy
       flash[:success] = 'Successfully deleted...'
       redirect_to admin_path
