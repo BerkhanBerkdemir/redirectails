@@ -21,7 +21,7 @@
       <td><%= url.id %></td>
       <td><%= url.url %></td>
       <td><%= url.url_id %></td>
-      <td><%= url.status %></td>
+      <td><% if url.status %>Private<% else %>Public<% end %></td>
       <td><%= url.created_at %></td>
       <td><%= link_to 'Delete', delete_path(url), method: :delete %></td>
     </tr>
