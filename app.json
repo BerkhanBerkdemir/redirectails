@@ -20,15 +20,5 @@
     "scripts": {
         "postdeploy": "bundle exec rails db:migrate"
     },
-    "addons": ["heroku-postgresql"],
-    "env": {
-        "NAME": {
-            "value": "Admin",
-            "description": "Change dashboard username"
-        },
-        "PASSWORD": {
-            "value": "secretpassw0rd",
-            "description": "Change dashboard password"
-        }
-    }
+    "addons": ["heroku-postgresql"]
 }
