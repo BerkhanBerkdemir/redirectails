@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'landings#index'
 
-  resources :admins, path: 'admin',
+  resources :admin, path: 'admin',
                      as: 'admin',
                      only: [:index, :destroy]
 
