@@ -7,6 +7,7 @@
     <meta name="author" content="Berkhan Berkdemir"/>
 
     <title><%= yield :title %> | RedirecTails</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css" integrity="sha256-pz64SJ9vnWkyhtOo7mtiOekWuFo7YIGXrzXjElYzcWA=" crossorigin="anonymous" />
@@ -17,15 +18,48 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+        <div class="container">
+          <%= link_to 'RedirecTails', root_path, class: 'navbar-brand' %>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+              <% unless current_user %>
+                <li class="nav-item">
+                  <%= link_to t('navbar.login'), login_path, class: 'nav-link' %>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to t('navbar.dashboard'), admin_index_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t('navbar.settings'), edit_profile_path(current_user.username), class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t('navbar.logout'), logout_path, class: 'nav-link' %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container h-100">
       <%= yield %>
     </div>
 
-    <footer>
+    <footer class="modal-footer bg-light">
       <div class="container">
         <span class="text-muted">Copyright <%= Time.current.year %>, <a href="https://github.com/BerkhanBerkdemir/redirectails">RedirecTails</a></span>
       </div>
     </footer>
+
+    <% console if Rails.env.development? %>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js" integrity="sha256-AoNQZpaRmemSTxMy9xcqXX5VLwI6IMPYugO7bFHOW+U=" crossorigin="anonymous"></script>

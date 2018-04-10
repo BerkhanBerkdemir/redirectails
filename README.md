@@ -4,7 +4,7 @@
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
-![RedirecTails screenshort from v1.1.0](screenshot.png)
+![RedirecTails screenshort from v1.3.0](screenshot.png)
 
 ## Deploy master version
 
@@ -12,7 +12,7 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 ## Installation
 
-Please follow the [documentation](documentation)
+Please follow the [documentation](https://github.com/BerkhanBerkdemir/redirectails/wiki/Installation)
 
 ## Technologies
 
@@ -34,7 +34,7 @@ Please refer to [contributing documentation](CONTRIBUTING.md).
 
 ### Important links
 
-* [Demo from master branch](https://production-redirectails.herokuapp.com/)
+* [Demo from master branch](https://redirectails.herokuapp.com/)
 * [Main repository](https://github.com/BerkhanBerkdemir/redirectails)
 
 ### Code of Conduct
@@ -43,7 +43,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ## Feature Plan
 
-* Admin dashboard for manage URLs and see URL analytics
+Please check issue and project dashboards.
 
 ## Maintainers
 

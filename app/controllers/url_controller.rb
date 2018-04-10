@@ -5,7 +5,7 @@ class UrlController < ApplicationController
     @url = Url.find_by url_id: params[:url_id]
 
     unless @url
-      flash[:danger] = I18n.t 'error.short_link_not_found'
+      flash[:danger] = t 'error.short_link_not_found'
       render 'landings/index'
     end
   end
@@ -17,7 +17,7 @@ class UrlController < ApplicationController
       @url.update click: @url.click + 1
       redirect_to @url.url
     else
-      flash[:danger] = I18n.t 'error.short_link_not_found'
+      flash[:danger] = t 'error.short_link_not_found'
       render 'landings/index'
     end
   end
@@ -29,7 +29,7 @@ class UrlController < ApplicationController
     if @url.save
       redirect_to settings_path @url.url_id
     else
-      flash[:danger] = I18n.t 'error.something_went_wrong'
+      flash[:danger] = t 'error.something_went_wrong'
       render 'landings/index'
     end
   end

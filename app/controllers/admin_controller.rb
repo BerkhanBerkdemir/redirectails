@@ -1,9 +1,8 @@
 class AdminController < ApplicationController
-  http_basic_authenticate_with name: ENV.fetch('NAME'),
-                               password: ENV.fetch('PASSWORD')
+  before_action :authorize
 
   # Get all URL from database
-  def dashboard
+  def index
     @url = Url.all
   end
 
@@ -15,11 +14,10 @@ class AdminController < ApplicationController
     # If not return error message. Sysadmin should check error.
     # TODO: Write I18n for 19 and 22.
     if url.destroy
-      flash[:success] = 'Successfully deleted...'
-      redirect_to admin_path
+      flash[:success] = t 'dashboard.successfully_deleted'
     else
-      flash[:danger] = 'Something went wrong. Please check your logs'
-      redirect_to admin_path
+      flash[:danger] = t 'error.check_logs'
     end
+    redirect_to admin_index_path
   end
 end

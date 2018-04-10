@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
   root 'landings#index'
 
-  # Admin dashbaoard routes
-  get '/admin', to: 'admin#dashboard', as: 'admin'
-  delete '/admin/:id', to: 'admin#destroy', as: :delete
+  # Authentication routes
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  resources :admin, path: 'admin',
+                     as: 'admin',
+                     only: [:index, :destroy]
+
+  resources :users, path: 'profile',
+                    as: 'profile',
+                    param: :username,
+                    only: [:edit, :update]
 
   # Public routes
   get '/:url_id', to: 'url#redirect_user', as: 'redirect'
