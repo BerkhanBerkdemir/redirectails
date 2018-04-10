@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'landings#index'
 
-  # Admin dashbaoard routes
-  get '/admin', to: 'admin#dashboard', as: 'admin'
-  delete '/admin/:id', to: 'admin#destroy', as: :delete
+  resources :admins, path: 'admin',
+                     as: 'admin',
+                     only: [:index, :destroy]
 
   # Public routes
   get '/:url_id', to: 'url#redirect_user', as: 'redirect'
