@@ -12,7 +12,7 @@ This project makes your URL to more useful, short URLs. It is easy to use. Just 
 
 ## Installation
 
-Please follow the [documentation](documentation)
+Please follow the [documentation](https://github.com/BerkhanBerkdemir/redirectails/wiki/Installation)
 
 ## Technologies
 
@@ -34,7 +34,7 @@ Please refer to [contributing documentation](CONTRIBUTING.md).
 
 ### Important links
 
-* [Demo from master branch](https://production-redirectails.herokuapp.com/)
+* [Demo from master branch](https://redirectails.herokuapp.com/)
 * [Main repository](https://github.com/BerkhanBerkdemir/redirectails)
 
 ### Code of Conduct
