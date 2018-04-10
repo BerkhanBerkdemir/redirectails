@@ -10,6 +10,11 @@ Rails.application.routes.draw do
                      as: 'admin',
                      only: [:index, :destroy]
 
+  resources :users, path: 'profile',
+                    as: 'profile',
+                    param: :username,
+                    only: [:edit, :update]
+
   # Public routes
   get '/:url_id', to: 'url#redirect_user', as: 'redirect'
   get '/s/:url_id', to: 'url#show', as: 'settings'
