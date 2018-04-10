@@ -6,12 +6,12 @@
 
 <div class="row">
   <div class="col-12 col-md-3">
-    <h2>Sidebar</h2>
+    <h2><%= t 'dashboard.sidebar' %></h2>
     <div class="list-group">
-      <%= link_to 'Analytics',
+      <%= link_to t('dashboard.analytics'),
                   admin_index_path,
                   class: 'list-group-item list-group-item-action' %>
-      <%= link_to 'Latest URL',
+      <%= link_to t('dashboard.latest_url'),
                   admin_index_path,
                   class: 'list-group-item list-group-item-action' %>
     </div>
@@ -21,11 +21,11 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Original URL</th>
-            <th>Generated URL</th>
-            <th>Status</th>
-            <th>Created</th>
-            <th>Action</th>
+            <th><%= t 'dashboard.table.original_url' %></th>
+            <th><%= t 'dashboard.table.generated_url' %></th>
+            <th><%= t 'global.status' %></th>
+            <th><%= t 'dashboard.table.created_at' %></th>
+            <th><%= t 'dashboard.table.action' %></th>
           </tr>
         </thead>
         <tbody>
@@ -33,13 +33,13 @@
           <tr>
             <td><%= url.url %></td>
             <td><%= url.url_id %></td>
-            <td><% if url.status %>Private<% else %>Public<% end %></td>
+            <td><% if url.status %><%= t 'global.private' %><% else %><%= t 'global.public' %><% end %></td>
             <td>
               <time datetime="<%= url.created_at %>">
                 <%= url.created_at.strftime("%A, %b %d, %Y, %I:%M %p") %>
               </time>
             </td>
-            <td><%= link_to 'Delete', admin_path(url),
+            <td><%= link_to t('global.delete'), admin_path(url),
                                       method: :delete,
                                       data: { confirm: 'Are you sure?' } %></td>
           </tr>

@@ -5,7 +5,7 @@
 <% end %>
 
 <%= form_tag login_path do %>
-  Username: <%= text_field_tag :username %> <br>
-  Password: <%= password_field_tag :password %> <br>
+  <%= t 'global.username' %>: <%= text_field_tag :username %> <br>
+  <%= t 'global.password' %>: <%= password_field_tag :password %> <br>
   <%= submit_tag "Submit" %>
 <% end %>
