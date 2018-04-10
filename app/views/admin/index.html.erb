@@ -22,7 +22,7 @@
       <td><%= url.url %></td>
       <td><%= url.url_id %></td>
       <td><% if url.status %>Private<% else %>Public<% end %></td>
-      <td><%= url.created_at %></td>
+      <td><time datetime="<%= url.created_at %>"><%= url.created_at.strftime("%A, %b %d, %Y, %I:%M %p") %></time></td>
       <td><%= link_to 'Delete', admin_path(url),
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %></td>
