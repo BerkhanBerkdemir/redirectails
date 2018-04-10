@@ -4,7 +4,7 @@
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
-![RedirecTails screenshort from v1.1.0](screenshot.png)
+![RedirecTails screenshort from v1.3.0](screenshot.png)
 
 ## Deploy master version
 
