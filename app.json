@@ -18,7 +18,7 @@
     },
     "success_url": "/",
     "scripts": {
-        "postdeploy": "bundle exec rails db:migrate"
+        "postdeploy": "bundle exec rails db:migrate db:seed"
     },
     "addons": ["heroku-postgresql"]
 }
