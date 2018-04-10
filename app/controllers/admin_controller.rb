@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
-  http_basic_authenticate_with name: ENV.fetch('NAME'),
-                               password: ENV.fetch('PASSWORD')
+  # http_basic_authenticate_with name: ENV.fetch('NAME'),
+  #                              password: ENV.fetch('PASSWORD')
 
   # Get all URL from database
   def index
@@ -19,6 +19,6 @@ class AdminController < ApplicationController
     else
       flash[:danger] = 'Something went wrong. Please check your logs'
     end
-    redirect_to admin_path
+    redirect_to admin_index_path
   end
 end
