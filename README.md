@@ -43,7 +43,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ## Feature Plan
 
-* Admin dashboard for manage URLs and see URL analytics
+Please check issue and project dashboards.
 
 ## Maintainers
 
