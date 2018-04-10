@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  before_action :authorize
+
   # Get all URL from database
   def index
     @url = Url.all
