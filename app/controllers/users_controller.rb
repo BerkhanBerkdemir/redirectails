@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   
   def update
     user = User.find_by username: params[:username]
-    if user.update(params.require(:user).permit(:username, :email))
+    if user.update(params.require(:user).permit(:username, :email, :password, :password_confirmation))
       redirect_to root_path
     else
       render 'users/edit'
