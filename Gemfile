@@ -33,7 +33,7 @@ gem 'bootstrap', '~> 4.0'
 
 group :production do
   # Use Puma as the app server
-  gem 'puma', '~> 3.7'
+  gem 'puma', '~> 3.11'
 end
 
 group :development, :test do
