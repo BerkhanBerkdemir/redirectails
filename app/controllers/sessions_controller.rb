@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = t 'session.logged_in_ok'
-      redirect_to root_path
+      redirect_to admin_index_path
     else
       flash[:danger] = t 'error.invalid_combination'
       redirect_to login_path
