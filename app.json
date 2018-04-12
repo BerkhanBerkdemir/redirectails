@@ -20,5 +20,5 @@
     "scripts": {
         "postdeploy": "bundle exec rails db:migrate db:seed"
     },
-    "addons": ["heroku-postgresql"]
+    "addons": ["heroku-postgresql", "heroku-redis"]
 }
