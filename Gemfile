@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Use Bootstrap as a framework
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
