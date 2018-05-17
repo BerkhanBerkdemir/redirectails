@@ -44,7 +44,7 @@ group :development, :test do
   gem 'rails-controller-testing'
 
   gem 'simplecov'
-  gem 'rubocop', '~> 0.55.0', require: false
+  gem 'rubocop', '~> 0.56.0', require: false
 end
 
 group :development do
