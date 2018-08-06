@@ -24,7 +24,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  username: redirectails
+  password: redirectails
+  host: 127.0.0.1
 
 development:
   <<: *default
@@ -38,6 +40,4 @@ test:
   database: redirectails_test
 
 production:
-  <<: *default
-  timeout: 5000
-
+  url: <%= ENV.fetch("DATABASE_URL") %>

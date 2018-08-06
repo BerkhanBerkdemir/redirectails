@@ -1,21 +1,16 @@
 language: ruby
 rvm:
-  - 2.3
+- 2.4.1
 
 services:
-  - postgresql
-
-addons:
-  hosts:
-    - redirectails.dev
-
-env:
-  - DATABASE_URL="postgres://postgres:@redirectails.dev:5432/"
+- postgresql
 
 bundler_args: --without production
 
 before_script:
-  - psql -c 'CREATE DATABASE redirectails_development;' -U postgres
-  - bin/rails db:setup
+- psql -c "CREATE USER redirectails WITH PASSWORD redirectails;" -U postgres
+- psql -c "CREATE DATABASE redirectails_test;" -U postgres
+- psql -c "GRANT ALL PRIVILEGES ON DATABASE redirectails_test TO redirectails;" -U postgres
+- bin/rails db:setup
 
-script: rspec spec
+script: bundle exec rspec

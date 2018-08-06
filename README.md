@@ -1,24 +1,26 @@
-# RedirecTails - *yet-another* URL shortener.
+# RedirecTails - *yet-another* URL shortener
 
-[![Build Status](https://travis-ci.org/BerkhanBerkdemir/redirectails.svg?branch=master)](https://travis-ci.org/BerkhanBerkdemir/redirectails) [![CodeFactor](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails/badge)](https://www.codefactor.io/repository/github/berkhanberkdemir/redirectails) ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg) ![Release](https://img.shields.io/badge/release-v1.3.0-blue.svg) ![Ruby Version](https://img.shields.io/badge/Ruby%20tested-2.3-green.svg)
+[![Build Status](https://travis-ci.org/BerkhanBerkdemir/redirectails.svg?branch=master)](https://travis-ci.org/BerkhanBerkdemir/redirectails)
+![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)
 
 This project makes your URL to more useful, short URLs. It is easy to use. Just enter your URL and get shortener URL.
 
-![RedirecTails screenshort from v1.3.0](screenshot.png)
-
-## Deploy master version
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BerkhanBerkdemir/redirectails/tree/master)
+![RedirecTails screenshort](screenshot.png)
 
 ## Installation
 
 Please follow the [documentation](https://github.com/BerkhanBerkdemir/redirectails/wiki/Installation)
 
+### Deploy master version
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BerkhanBerkdemir/redirectails/tree/master)
+
 ## Technologies
 
-* PostgreSQL as a database
-* Bootstrap as a frontend
-* Heroku as a PaaS
+* Ruby on Rails 5.2
+* Bootstrap 4.1
+* PostgreSQL
+* Redis
 
 ## Documentation
 
@@ -26,11 +28,7 @@ See [wiki](https://github.com/BerkhanBerkdemir/redirectails/wiki)
 
 ## Contributing
 
-Please refer to [contributing documentation](CONTRIBUTING.md).
-
-### Coverage
-
-[Simplecov coverage](https://berkhanberkdemir.gitlab.io/redirectails/coverage)
+Please refer to [contributing documentation](.github/CONTRIBUTING.md).
 
 ### Important links
 
@@ -39,15 +37,11 @@ Please refer to [contributing documentation](CONTRIBUTING.md).
 
 ### Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ## Feature Plan
 
 Please check issue and project dashboards.
-
-## Maintainers
-
-* Berkhan Berkdemir - [GitHub](https://github.com/BerkhanBerkdemir) | [Twitter](https://twitter.com/BerkhanBerkdemi)
 
 ## License
 
