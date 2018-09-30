@@ -7,13 +7,13 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :admin, path: 'admin',
-                     as: 'admin',
-                     only: [:index, :destroy]
+                    as: 'admin',
+                    only: %i[index destroy]
 
   resources :users, path: 'profile',
                     as: 'profile',
                     param: :username,
-                    only: [:edit, :update]
+                    only: %i[edit update]
 
   # Public routes
   get '/:url_id', to: 'url#redirect_user', as: 'redirect'

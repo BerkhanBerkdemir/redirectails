@@ -1,16 +1,35 @@
+dist: trusty
 language: ruby
 rvm:
-- 2.4.1
-
-services:
-- postgresql
+- 2.5.1
 
 bundler_args: --without production
+cache:
+ directories:
+ - /home/travis/.rvm/
+ - vendor/bundle/
+ - node_modules/
 
-before_script:
-- psql -c "CREATE USER redirectails WITH PASSWORD redirectails;" -U postgres
-- psql -c "CREATE DATABASE redirectails_test;" -U postgres
-- psql -c "GRANT ALL PRIVILEGES ON DATABASE redirectails_test TO redirectails;" -U postgres
-- bin/rails db:setup
+env:
+- RAILS_ENV=test
 
-script: bundle exec rspec
+jobs:
+  include:
+  - stage: test
+    addons:
+      postgresql: "9.6"
+    before_script:
+    - psql -c "CREATE DATABASE redirectails_test;" -U postgres
+    - psql -c "CREATE USER redirectails WITH PASSWORD 'redirectails';" -U postgres
+    - psql -c "GRANT ALL PRIVILEGES ON DATABASE redirectails_test TO redirectails;" -U postgres
+    - psql -c "ALTER USER redirectails WITH SUPERUSER;" -U postgres
+    - bundle exec rails db:setup
+    script: bundle exec rspec
+    after_script:
+    - bundle exec rails db:drop
+  - env: TEST_TYPE=static
+    script: bundle exec rubocop
+  - env: TEST_TYPE=static
+    script: bundle exec scss-lint
+  allow_failures:
+  - env: TEST_TYPE=static

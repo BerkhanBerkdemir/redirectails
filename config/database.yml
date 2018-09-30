@@ -40,4 +40,4 @@ test:
   database: redirectails_test
 
 production:
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  url: <%= ENV["DATABASE_URL"] %>
